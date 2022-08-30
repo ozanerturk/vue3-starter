@@ -1,4 +1,4 @@
-import {t} from "@/i18n"
+import { t } from "@/i18n"
 export interface MenuType {
   id: string;
   label: string;
@@ -26,5 +26,12 @@ export const MenuItems = (): MenuType[] => {
         { id: "3", label: t("navmenu.users.create"), name: "users.create" },
       ],
     },
+    {
+      id: "2",
+      label: t("navmenu.customers"),
+      icon: "customers",
+      name: 'customers'
+    },
+
   ];
 }

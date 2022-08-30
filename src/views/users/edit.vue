@@ -4,6 +4,7 @@ import { onMounted, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useNotification } from "naive-ui";
 import type { FormInst, FormRules, UploadFileInfo } from "naive-ui";
+
 interface ModelType {
   email: string | null;
   username: string | null;

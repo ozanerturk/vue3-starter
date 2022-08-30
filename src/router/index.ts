@@ -3,13 +3,14 @@ import { useUserStore } from "@/stores/user";
 import { createRouter, createWebHistory, START_LOCATION } from "vue-router";
 import { createToast } from "mosha-vue-toastify";
 import * as NProgress from "nprogress";
-
+import { t } from "@/i18n"
 const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("/src/views/dashboard.vue"),
+    component: () => import("/src/views/dashboard/dashboard.vue"),
     meta: { requiresAuth: true },
+
   },
   {
     path: "/login",
@@ -25,6 +26,43 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import("/src/views/users/index.vue"),
     meta: { requiresAuth: true },
+  },
+  {
+    path: "/customers",
+    name: "customers",
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("/src/views/customers/index.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+
+
+  },
+  {
+    path: "/customers/:customerId",
+    name: "customer-details",
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("/src/views/customers/details.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+
+  },
+  {
+    path: "/customers/:customerId/point/:pointId",
+    name: "point-details",
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("/src/views/points/details.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+
   },
   {
     path: "/users/create",

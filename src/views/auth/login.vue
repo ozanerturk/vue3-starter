@@ -70,8 +70,8 @@ const login = async (e: MouseEvent) => {
 
 <template>
   <n-h1 style="--font-size: 60px; --font-weight: 100">
-    <img alt="Devstack logo" class="logo" src="@/assets/logo.png" width="100" />
-    Devstack
+    <img alt="Sensemore logo" class="logo" src="@/assets/logo.png" width="100" />
+    RES Portal
   </n-h1>
   <n-card size="large" style="--padding-bottom: 30px">
     <n-h2 style="--font-weight: 400">{{ $t('login.signin') }}</n-h2>
