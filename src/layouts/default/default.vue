@@ -9,7 +9,7 @@ const userStore = useUserStore();
 
 <template>
   <PreLoader v-if="userStore.isLoading" />
-  <n-layout v-else-if="userStore.user" position="absolute" has-sider>
+  <n-layout v-else position="absolute" has-sider>
     <Sidebar />
     <n-layout>
       <Header />

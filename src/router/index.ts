@@ -95,6 +95,7 @@ const router = createRouter({
 router.beforeEach(async (to, from) => {
   const userStore = useUserStore();
   const api = useApi();
+  return;
   if (from === START_LOCATION && userStore.isLoggedIn) {
     // 1. If the name is not set, it means we are navigating to the first page
     // and we are logged in, so we should check user information from the server
@@ -144,7 +145,6 @@ router.beforeEach(async (to, from) => {
         hideProgressBar: true,
       }
     );
-
     return {
       // Will follow the redirection set in /@src/pages/auth/index.vue
       name: "login",
